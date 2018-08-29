@@ -36,7 +36,7 @@ while check != True:
         num = num + 1
 
         # If the condition where the numbers eventually reach 21, that means we've exceed our limit of 20 and break there
-        if num == 11:
+        if num == 21:
             break
 
 # End timer
