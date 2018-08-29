@@ -5,6 +5,9 @@
 # Create a list that will hold the Fibonacci sequence up to a value of 4,000,000
 flist = [1, 2]
 
+# Create a list to hold the even values from flist above
+elist = []
+
 # Create an index variable so we can have a loaction from which to add
 index = 1
 
@@ -29,4 +32,17 @@ while allTerms != True:
         # Increase the index value
         index += 1
 
-print(flist)
+# Get all the even terms from flist and add it to elist
+for num in flist:
+    if num % 2 == 0:
+        elist.append(num)
+
+# Create variable 'total' to store the sum of elist
+total = 0
+
+# Sum elist into variable total
+for num in elist:
+    total += num
+
+# Print total
+print(total)
