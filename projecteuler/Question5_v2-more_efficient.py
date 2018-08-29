@@ -8,10 +8,10 @@ start_time = time.time()            ##
 
 # Set base variables to be used
 check = None    # Used to see if the number is divisible
-base = 20
+base = 20       # Set base value to multiply
 mult = 20       # Divide multiples of 20 by the numbers to see if valid
-a = 19           # Divisor that will be changing
-b = 1
+a = 19          # Divisor that will be changing
+b = 1           # Multiply the base value (20) by b to get the next multiple
 
 # Create a while loop that will check if the number is divisible from 20 to 1
 while check != True:
