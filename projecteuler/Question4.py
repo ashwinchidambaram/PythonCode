@@ -1,6 +1,10 @@
 # Ashwin Chidambaram                                                                ##
 # Task: Find the largest palindrome made from the product of two 3-digit numbers    ##
 ######################################################################################
+# Self assesment on program runtime ##
+import timeit                       ##
+start = timeit.default_timer()      ##
+######################################
 
 # Declare variable a and b to represent two 2-digit numbers
 a = 999
@@ -39,5 +43,11 @@ while a != 0:
 # Sort the list of palindromes (will sort from least to greatest)
 palidromes.sort()
 
-# Print output message and pop the last value from the list since that is the largest 
+# End timer
+stop = timeit.default_timer()
+
+# Print output message and pop the last value from the list since that is the largest
 print('The largest palindrome made from the product of two 3-digit numbers is: {}'.format(palidromes.pop()))
+
+# Print runtime
+print('RunTime: {} seconds'.format(round((stop - start),4)))
