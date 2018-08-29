@@ -1,5 +1,5 @@
 # Ashwin Chidambaram 											                                                                        ##
-# Task: Considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms  ##	                                            ##
+# Task: Considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms  ##
 ##########################################################################################################################################
 
 # Create a list that will hold the Fibonacci sequence up to a value of 4,000,000
