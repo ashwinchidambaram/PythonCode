@@ -2,8 +2,8 @@
 # Task: What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?   ##
 ##############################################################################################################
 # Self assesment on program runtime ##
-import timeit                       ##
-start = timeit.default_timer()      ##
+import time                         ##
+start_time = time.time()            ##
 ######################################
 
 # Set base variables to be used
@@ -36,14 +36,14 @@ while check != True:
         num = num + 1
 
         # If the condition where the numbers eventually reach 21, that means we've exceed our limit of 20 and break there
-        if num == 21:
+        if num == 11:
             break
 
 # End timer
-stop = timeit.default_timer()
+runtime = time.time() - start_time
 
 # Print output
 print("Smallest positive number evenly divisible by 1 to 20: {}".format(a))
 
 # Print runtime
-print('RunTime: {} seconds'.format(round((stop - start),4)))
+print('RunTime: {} seconds'.format(round(runtime,4)))
