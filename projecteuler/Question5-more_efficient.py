@@ -18,7 +18,6 @@ while check != True:
 
     # Check if mult is divisible by a
     value = mult % a
-    #print('Main Value: {}, Dividing Value: {}'.format(mult,a))
 
     # If value is not 0, then it is not evenly divisible
     if value != 0:
@@ -41,7 +40,6 @@ while check != True:
         # Decremnt a by 1 so as to divide bt 18, 17, 16, etc. till 1
         else:
             a = a - 1
-            #print('Value of a is: {}'.format(a))
 
 # End runtime measure
 runtime = time.time() - start_time
