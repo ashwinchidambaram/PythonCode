@@ -5,40 +5,61 @@
 import time                         ##
 start_time = time.time()            ##
 ######################################
-# a < b < c
-# a^2 + b^2 = c^2
-# Make a = 1, b = 2, run b till 11. check. run a = 2, b till 11. repeat till a = 10, b = 11 the move onto next increment
-x = 1
-tripleList = []
-a = None
-b = None
-c = None
-sum = 0
 
-# Multiply a, b and store into a list
-while sum <= 1000:
+# Import math library to be able to take square root
+import math
 
-    # Get values of a, b, c
-    a = (2 * x) + 1
-    b = (2 * (x ** x)) + (2 * x)
-    c = (2 * (x ** x)) + (2 * x) + 1
+# Declare variables
+a = 2               # Value of a
+b = 3               # Value of b
+c = 4               # Value of c
+i = 0               # Counter used to iterate through use cases
+sumVal = 1000.0     # Change sumVal to any floating point value
 
-    x = x + 1
+# Declare condition for where program will loop till we get the value we want
+while sum != sumVal:
 
-    sum = a + b + c
+    # Increment a and b by a value of 1 to get set values
+    a = a + 1
+    b = b + 1
 
-    print('A: {}, B: {}, C: {}, Sum: {}'.format(a,b,c,sum))
+    # Set iteration in 10000 range since there are many possibilities for a triplet
+    while i != 10000:
 
-for (a,b,c) in tripleList
+        # Multiply a, b in increments of 10 sp as to not run more than necessary
+        sum = (a ** 2) + (b ** 2)
 
+        # Take the root of sum of a^2 and b^2 to get c
+        c = math.sqrt(sum)
 
+        # Check if the sum is a perfect square, if not then don't worry about it
+        if c.is_integer() == True:
 
+            # Since c is a perfect sqaure, sum (a, b, c) and check if it is 1000
+            sum = a + b + c
+            #print('SUM: {}'.format(sum))
+            #print('C: {}'.format(c))
+
+            # If the sum is equal to 1000, store the values at this point and break loop
+            if sum == sumVal:
+                A = a
+                B = b
+                C = c
+                break
+
+        # Increment b by 1 and loop count by 1
+        b = b + 1
+        i = i + 1
+
+    # If loop above has run i times, reset b to the original value so that the next set can be checked and reset the loop counter
+    b = b - i
+    i = 0
 
 # End runtime measure
 runtime = time.time() - start_time
 
 # Print output
-print ('Got it')
+print ('Product of abc: {}'.format((A*B*C)))
 
 # Print runtime
 print('RunTime: {} seconds'.format(round(runtime,4)))
